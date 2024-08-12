@@ -1,0 +1,48 @@
+body {
+    background: #FFFFE0;
+    font-size: 30px;
+}
+
+.container {
+    display: grid; /* формирует сетку как блок - не понимаю как работает*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* количество столбцов */
+    grid-gap: 5px; /*расстояние (промежуток) между строками и столбцами*/
+    max-width: 300px; /* устанавливает максимальную ширину элемента*/
+    padding: 10px; /* размер внешних границ */
+    background: #ADD8E6;
+    height: 250px;
+}
+
+.container .button {
+    background: #FFFFFF;
+    padding: 5px;
+    display: flex;
+    justify-content: center; /* Flex-элементы располагаются по центру*/
+    cursor: pointer; /* Устанавливает форму курсора, когда он находится в пределах элемента*/
+    border: none;
+    max-height: 100%;
+    align-items: center; /*элементы (текст) устанавливается по центру*/
+}
+
+.input-display {
+    grid-column: 1/-1; /*занимает всю длинну блока по горизонтали(column)- не до конца понимаю как работает*/
+    padding: 0; /* почему не уберает поля? */
+    height: 50px;
+    width: 100%;
+}
+
+input {
+    width: 100%; /*вытягивает ячейку ввода чисел на всю длинну блока*/
+    height: 50px; /* высота поля ввода*/
+    border: none; /* уберает рамку поля ввода*/
+}
+
+.ravno {
+    grid-row: 5/7; /*растягивает кнопку (блок) по вертикали с 4 до 6 строки*/
+    grid-column: 5; /* занимает (резервирует) 5 сроку - наверное так!!*/
+    align-items: center;
+}
+
+.zero {
+    grid-column: 1/3; /*занимает с 1 до 3 блока (кнопку 0)*/
+}
